@@ -1,0 +1,508 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#"
+     xml:base="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#hasArtists -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#hasArtists">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museums"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artists"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#hasPeriods -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#hasPeriods">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museums"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Periods"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#hasPieces -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#hasPieces">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museums"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Pieces"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#hasProduced -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#hasProduced">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artists"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Pieces"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Address -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Address">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museums"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Hours -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Hours">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museums"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artists"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museums"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Periods"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Neighborhood -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Neighborhood">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museums"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Price -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Price">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museums"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Tickets -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Tickets">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museums"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Year -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Year">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Pieces"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Applied -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Applied">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artists"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Art -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Art">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museums"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artistic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artistic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Periods"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artists -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artists"/>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Athlete -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Athlete">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artists"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Ceramics -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Ceramics">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museums"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Decorative -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Decorative">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artists"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Fine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Fine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artists"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#History -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#History">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museums"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Maritime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Maritime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museums"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museums -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museums"/>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Music -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Music">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museums"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Performance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Performance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artists"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Periods -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Periods"/>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Photographer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Photographer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artists"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Pieces -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Pieces"/>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Plastic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Plastic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artists"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Science -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Science">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museums"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Sports -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Sports">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museums"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Torture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Torture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museums"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Visual -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Visual">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artists"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Wax -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Wax">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museums"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artist1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artist1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artists"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Plastic"/>
+        <hasProduced rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Piece1"/>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pablo picasso</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artist2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artist2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artists"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Plastic"/>
+        <hasProduced rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Piece2"/>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wax figures and objects designers for the wax museum of barcelona</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artist3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artist3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artists"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Visual"/>
+        <hasProduced rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Piece3"/>
+        <hasProduced rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Piece4"/>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mario eskenazi</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museum1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museum1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Art"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museums"/>
+        <hasArtists rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artist1"/>
+        <hasPieces rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Piece1"/>
+        <Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Street Montcada, 15-23, Barcelona</Address>
+        <Hours rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Monday: Closed
+Tuesday: 9:00 AM– 7:00 PM
+Wednesday: 9:00 AM– 7:00 PM
+Thursday: 9:00 AM– 9:30 PM
+Friday: 9:00 AM– 7:00 PM
+Saturday: 9:00 AM– 7:00 PM
+Sunday: 9:00 AM– 7:00 PM</Hours>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Picasso museum</Name>
+        <Neighborhood rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Born</Neighborhood>
+        <Price rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17 €</Price>
+        <Tickets rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://entrades.eicub.net:8443/muslinkIII/venda/index.jsp?lang=3&amp;nom_cache=PICASSO&amp;property=PICASSO&amp;grupActiv=1</Tickets>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museum2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museum2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museums"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Wax"/>
+        <hasArtists rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artist2"/>
+        <hasPieces rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Piece2"/>
+        <Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Street Banca, 7, Barcelona</Address>
+        <Hours rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Monday:  10:00 AM- 1.30 PM and 4:00 PM- 7:30 PM
+Tuesday:  10:00 AM- 1.30 PM and 4:00 PM- 7:30 PM
+Wednesday:  10:00 AM- 1.30 PM and 4:00 PM- 7:30 PM
+Thursday:  10:00 AM- 1.30 PM and 4:00 PM- 7:30 PM
+Friday:  10:00 AM- 1.30 PM and 4:00 PM- 7:30 PM
+Saturday: 11:00 AM- 2:00 PM and 4:30 PM- 8:30 PM</Hours>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wax museum</Name>
+        <Neighborhood rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gothic</Neighborhood>
+        <Price rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15 €</Price>
+        <Tickets rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://80.58.142.206:8080/muslinkIII/venda/index.jsp?nom_cache=MCB&amp;property=MCB&amp;lang=3</Tickets>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museum3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museum3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Art"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Museums"/>
+        <hasArtists rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Artist3"/>
+        <hasPieces rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Piece3"/>
+        <Address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catalan glories square, 37-38, Barcelona</Address>
+        <Hours rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Monday: Closed (Except holidays)
+Tuesday: 10:00 AM- 8:00 PM
+Wednesday: 10:00 AM- 8:00 PM
+Thursday: 10:00 AM- 8:00 PM
+Friday: 10:00 AM- 8:00 PM
+Saturday: 10:00 AM- 8:00 PM
+Sunday: 10:00 AM- 8:00 PM</Hours>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Design museum</Name>
+        <Neighborhood rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clot</Neighborhood>
+        <Price rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Permanents exhibitions
+
+General admission: 6 €
+Reduced admission: 4 €
+
+Temporary exhibition
+
+General admission: € 3
+Reduced admission: € 2
+
+Combined admission permanet exhibitions and temporary exhibition
+
+General admission: € 6
+Concessions: € 4</Price>
+        <Tickets rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://entrades.eicub.net:8443/muslinkIII/venda/index.jsp?lang=1&amp;nom_cache=ARTS&amp;property=ARTS</Tickets>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Period1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Period1">
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Modern</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Period2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Period2">
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Art</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Period3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Period3">
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contemporary</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Piece1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Piece1">
+        <hasPeriods rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Period1"/>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Las meninas</Name>
+        <Year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1968</Year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Piece2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Piece2">
+        <hasPeriods rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Period2"/>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Figures and objects modeled with wax</Name>
+        <Year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1973</Year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Piece3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Piece3">
+        <hasPeriods rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Period3"/>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">What are scientific revolutions and other essays</Name>
+        <Year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1989</Year>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Piece4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Piece4">
+        <hasPeriods rdf:resource="http://www.semanticweb.org/josemiguel/ontologies/2018/11/untitled-ontology-10#Period3"/>
+        <Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Price for economic research book cover page</Name>
+        <Year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</Year>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.7.2018-12-02T02:23:35Z) https://github.com/owlcs/owlapi -->
+

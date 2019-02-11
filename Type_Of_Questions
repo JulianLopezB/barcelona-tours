@@ -1,0 +1,36 @@
+Type of Questions:
+
+1 .- Information Questions
+    - Can you give me information of the different types of <Museums> in your database?
+        - Where <Museums> can also be <Artists>, <Periods>, <Pieces> (in this case, <Pieces> is an empty class so the answer would be: "Sorry, no relevant results were returned.")
+        - It is important to mention that the structure of the question can be different. The only compulsory item is a keyword from the mentioned above.
+          For instance, we could also ask: Tell me about the type of <Artists> you can talk about.
+
+2.- List Questions
+    - Can you give me a list of the <Artists> in <Museum>?
+        - In this case, <Artists> is mapped to the Object Property <hasArtists> and <Museum> is the Data Property Value of the Data Property <Name>.
+          This means that we wan play around with diffferent questions mapped to different Object Properties and Names. Please see some examples below:
+    - What are the pieces <Produced> by <Artist>? (Object Property <hasProduced> and <Museum>)
+        - What are the pieces produced by Mario Eskenazi?
+        - Can you please share with me som information about some pieces produced by Pablo Picasso?
+    - What <Pieces> can we find in <Museum>? (Object Property <hasPieces> and <Museum>)
+        - What pieces can we find in Picasso Museum?
+        - Tell me what are the pieces we can find in the Design Museum?
+        - What pieces are stored in the Wax Museum?
+    - Do you know to what <Periods> does <Piece> belong to? (Object Property <hasPeriods> and <Piece>)
+        - Do you know to what periods does Las Meninas belong to?
+        - Do you know to what periods does figures and objects modeled with wax belong to?
+        - Figures and objects modeled with wax belong to... what periods?
+        - What are scientific revolutions and other essays is from periods...?
+        - Price for economic research book cover page is from periods...? ******* Not working *******
+
+3.- Specific Questions
+    - Can you please give me the <Price> for <Museum>
+        - In this case, <Price> corresponds to a Data Property and <Museum> corresponds to the Data Property Value for the Data Property "Name". We can
+          actually mix any Data Property (<Address>, <Hours>, <Neighborhood>, <Price>, <Tickets>, <Year>) with the Data Property Value for the Data Property "Name".
+        - Some examples are below:
+        - Please give me the price for Wax Museum.
+        - I have heard that the Design Museum is super expensive. Is this true? Can you please give me the price?
+        - I have heard that Las meninas is a very old art piece. Can you give me an idea of the year in whiich it was created?
+        - Is the Wax Museum too far away? Can you please tell me its address?
+        - We are in a rush right now... We were wondering if the Design Museum is still open... Can you please give us the hours for this museum?

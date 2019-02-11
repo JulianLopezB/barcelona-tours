@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html style="margin: auto; display:table;">
+    <head>
+      <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript">
+                </script>
+            <script>var synth = window.speechSynthesis;
+                app.use(express.static('img'));</script>
+            <style>
+            .speech {
+                border: 0px solid #DDD;
+                width: 600px;
+                padding: 0;
+                margin: 0;
+                margin-bottom: 30px;
+                font-family: 'Karla', sans-serif;
+                }
+
+            .results {
+                border: 0px solid #DDD;
+                width: 600px;
+                padding: 0;
+                margin: 0;
+                margin-top: 50px;
+                margin-bottom: 20px;
+                font-family: 'Karla', sans-serif;
+                font-size:30px;
+                }
+
+            .speech input {
+                border: 1;
+                width: 240px;
+                display: inline-block;
+                height: 30px;
+            }
+            .speech img {
+                float: right;
+                width: 40px;
+            }
+
+            .images {
+                margin: 20px;
+                display:block;
+                text-align: center;
+            }
+
+            body {
+                background: #FFFFFF;
+                color: #000000;
+                font-size: 16px;
+                font-family: 'Karla', sans-serif;
+                font-family: 'Karla', sans-serif;
+            }
+
+            select {
+                width: 83%;
+            }
+
+            form > div {
+                width: 81%;
+            }
+
+            .txt, form > div {
+                margin-bottom: 10px;
+                overflow: auto;
+            }
+
+            .clearfix {
+                clear: both;
+            }
+
+            label {
+                float: left;
+                width: 10%;
+                line-height: 1.5;
+            }
+
+            .rate-value, .pitch-value {
+                float: right;
+                width: 5%;
+                line-height: 1.5;
+            }
+
+            #rate, #pitch {
+                float: right;
+                width: 81%;
+            }
+
+            .controls {
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .controls button {
+                padding: 10px;
+            }
+
+
+            </style>
+    </head>
+
+    <body>
+
+            <img class='images' src="static/logo_bot2.png" width="600" align="center" style="float: center"/>
+
+        <div class="speech" >
+            Tours Barcelona Museums™ is a Chatbot that understands your voice and tries to give you suggestions about museums you can visit in the city of Barcelona according to your interests.
+        </div>
+
+        <i class="speech"><font color="gray">Only tested on Windows and Linux PCs. Not tested on other PCs or mobile devices.</font></i>
+
+        <div class="speech"><h3>Overview</h3>
+        <p>At a high level, we want to be able to understand two broad types of queries. Following is the flowchart.</p>
+        </div>
+        <picture>
+            <img src="static/diagrama2.jpeg" alt="Diagram" height="400" class='images' align="center">
+                </picture>
+
+        <div class="speech">
+
+            <p>You can issue voice queries of the following forms as of now.</p>
+
+            <h3>Information Questions</h3>
+            <ul>
+                <li>Can you give me information of the different types of <b>Museums</b> in your database?</li>
+            </ul>
+
+            <h3>List Questions</h3>
+            <ul>
+
+                <li>Can you give me a list of the <i>Artists</i> in <i>Museum</i>?</li>
+                <li>Can you please share with me some information about some pieces produced by Pablo Picasso?</li>
+                <li>What pieces can we find in Picasso Museum?</li>
+                <li>Tell me what are the pieces we can find in the Design Museum?</li>
+                <li>What pieces are stored in the Wax Museum?</li>
+                <li>Do you know to what periods does Las Meninas belong to?</li>
+            </ul>
+
+            <h3>Specific Questions</h3>
+            <ul>
+                <li>Can you give me the price of the Picasso Museum?</li>
+                <li>Can you give me the address of the Picasso Museum?</li>
+                <li>Can you gives me the neighborhoods of the Picasso Museum?</li>
+                <li>Can you give me the hours of the Picasso Museum?</li>
+                <li>I want to buy tickets for the Picasso Museum.</li>
+            </ul>
+
+            <h3>Knowledge Queries</h3>
+            <ul>
+                <li>Who was Picasso?</li>
+                <li>Tell me something about Sagrada Familia</li>
+            </ul>
+
+            </div>
+
+            <div class="speech">
+              <textarea style="width: 600px;font-family: 'Karla', sans-serif;font-size:x-large" name="q" id="transcript"
+                  placeholder="Welcome to Barcelona Museums! How can I help you?" rows="2" ></textarea>
+              <br>
+              <input id="btn_query" type="button" onclick="startDictation()" value="Query"
+              style="font-family: 'Karla', sans-serif;" />
+              <audio class="sound" src="chime.mp3"></audio>
+              <img src="static/loader.gif" width="100px" align="left" style="float: left" hidden="False" id="loader" />
+            </div>
+
+            <h3 class="results">Results</h3>
+            <div class="speech">
+              <textarea style="width: 600px;font-family: 'Karla', sans-serif;font-size:x-large" id="output" rows="2" placeholder="Results will appear here."
+                  readonly="False"></textarea>
+            </div>
+           <form>
+           <div>
+                <label for="rate">Rate</label><input type="range" min="0.1" max="2" value="1" step="0.1" id="rate">
+                    <div class="rate-value"></div>
+                    <div class="clearfix"></div>
+           </div>
+
+
+            <div>
+                <label for="pitch">Pitch</label><input type="range" min="0" max="2" value="1" step="0.1" id="pitch">
+                    <div class="pitch-value"></div>
+                    <div class="clearfix"></div>
+            </div>
+            <div class="speech">
+            <select id="voiceSelect"></select>
+            <input id="btn_speak" type="button" value="Speak" onclick="btnClick()" style="font-family: 'Karla', sans-serif;" />
+            <input id="btn_stop"  type="button" onclick="stopSpeech()" value="Stop" style="font-family: 'Karla', sans-serif;" />
+          </div>
+        </form>
+        <!-- utterThis.voice = synth.getVoices()[0]; -->
+
+        <!-- HTML5 Speech Recognition API -->
+        <script>
+
+
+          function startDictation() {
+              //document.getElementById('transcript').value = '';
+              document.getElementById('output').value = '';
+              if (document.getElementById('transcript').value != ''){
+                  var data = document.getElementById('transcript').value;
+                  $.post("http://localhost:5000/news_urls", { "data": data },
+                         function (response) {
+                         document.getElementById('loader').hidden = true;
+                         data = response;
+                         document.getElementById("output").value = data["urls"];
+                         }).error(function (response) {
+                                  document.getElementById('loader').hidden = true;
+                                  if (response.status == 400)
+                                  text = jQuery.parseJSON(response.responseText)["original_exception"];
+                                  else
+                                  text = "I'm sorry. I did not get that.";
+                                  document.getElementById("output").value = text;
+                                  });
+
+
+              }
+              else {
+                  if (window.hasOwnProperty('webkitSpeechRecognition')) {
+                      var recognition = new webkitSpeechRecognition();
+                      recognition.continuous = false;
+                      recognition.interimResults = false;
+                      recognition.lang = "en-US";
+                      recognition.start();
+                      recognition.onresult = function (e) {
+                          document.getElementById('loader').hidden = false;
+                          document.getElementById('transcript').value = e.results[0][0].transcript;
+                          recognition.stop();
+                          var data = e.results[0][0].transcript;
+                          $.post("http://localhost:5000/news_urls", { "data": data },
+                                 function (response) {
+                                 document.getElementById('loader').hidden = true;
+                                 data = response;
+                                 document.getElementById("output").value = data["urls"];
+                                 }).error(function (response) {
+                                          document.getElementById('loader').hidden = true;
+                                          if (response.status == 400)
+                                          text = jQuery.parseJSON(response.responseText)["original_exception"];
+                                          else
+                                          text = "I'm sorry. I did not get that.";
+                                          document.getElementById("output").value = text;
+                                          });
+                      };
+                      recognition.onerror = function (e) {
+                          recognition.stop();
+                          console.log("Recognition had an error");
+                      }
+                  }
+              }
+
+          }
+
+        var voiceSelect = document.querySelector('select');
+
+        var pitch = document.querySelector('#pitch');
+        var pitchValue = document.querySelector('.pitch-value');
+        var rate = document.querySelector('#rate');
+        var rateValue = document.querySelector('.rate-value');
+
+        var voices = [];
+
+        function populateVoiceList() {
+            voices = synth.getVoices().sort(function (a, b) {
+                 const aname = a.name.toUpperCase(), bname = b.name.toUpperCase();
+                 if ( aname < bname ) return -1;
+                 else if ( aname == bname ) return 0;
+                 else return +1;
+        });
+
+        var selectedIndex = voiceSelect.selectedIndex < 0 ? 0 : voiceSelect.selectedIndex;
+        voiceSelect.innerHTML = '';
+        for(i = 0; i < voices.length ; i++) {
+            var option = document.createElement('option');
+            option.textContent = voices[i].name + ' (' + voices[i].lang + ')';
+
+            if(option.textContent.includes('(en')) {
+
+                option.setAttribute('data-lang', voices[i].lang);
+                option.setAttribute('data-name', voices[i].name);
+                voiceSelect.appendChild(option);
+            }
+        }
+        voiceSelect.selectedIndex = selectedIndex;
+        }
+
+
+        populateVoiceList();
+        if (speechSynthesis.onvoiceschanged !== undefined) {
+            speechSynthesis.onvoiceschanged = populateVoiceList;
+        }
+
+
+
+
+        function btnClick() {
+            synth.cancel();
+            var utterThis = new SpeechSynthesisUtterance(document.getElementById("output").value);
+            var selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+            for(i = 0; i < voices.length ; i++) {
+                if(voices[i].name === selectedOption) {
+                    utterThis.voice = voices[i];
+                }
+            }
+
+
+            utterThis.pitch = pitch.value;
+            utterThis.rate = rate.value;
+            synth.speak(utterThis);
+        }
+
+        function stopSpeech() {
+            synth.cancel();
+        }
+
+        inputForm.onsubmit = function(event) {
+            event.preventDefault();
+
+            btnClick();
+
+            inputTxt.blur();
+        }
+
+        voiceSelect.onchange = function(){
+            btnClick();
+        }
+
+        </script>
+    </body>
+</html>
